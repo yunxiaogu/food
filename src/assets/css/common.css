@@ -1,0 +1,22 @@
+@import "./normalize.css";
+/* 项目基础样式 */
+/*
+  主题颜色
+  文字颜色
+  按钮颜色
+  链接颜色
+  边界阴影
+ */
+
+/* 获取根元素 */
+:root {
+  /* CSS定义变量*/
+  /* 主题颜色 */
+  /* --theme-color: #0effef; */
+  --theme-color: #11C4FF;
+  /* 导航栏高度 */
+  --tab-bar-height: 49px;
+  /* 工具栏高度 */
+  --top-bar-height: 44px;
+  /* 文字颜色 */
+}
