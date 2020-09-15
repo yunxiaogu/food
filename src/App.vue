@@ -3,7 +3,6 @@
     <keep-alive exclude="Detail">
       <router-view></router-view>
     </keep-alive>
-
     <!-- 底部导航栏 -->
     <TabBar></TabBar>
   </div>
@@ -13,7 +12,7 @@
   import TabBar from './components/common/tabbar/TabBar.vue'
 
   export default {
-    name: 'App',
+    name: 'app',
     components: {
       TabBar
     }
@@ -21,5 +20,9 @@
 </script>
 
 <style>
-  @import url("assets/css/common.css");
+  @import url("./assets/css/common.css");
+  
+  #app {
+    overflow: hidden;
+  }
 </style>

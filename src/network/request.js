@@ -4,7 +4,10 @@ import Axios from 'axios'
 export function request(config) {
   // 1 创建axios实例
   const instance = Axios.create({
-    baseURL: 'https://way.jd.com/jisuapi'
+    baseURL: 'https://way.jd.com/jisuapi',
+    params: {
+      appkey: 'bbcaafcf6ede661f110c251da3de0a79'
+    }
   })
   // 结合vue.config.js配置，解决跨域问题
   instance.defaults.baseURL = '/api'
@@ -17,7 +20,7 @@ export function request(config) {
   })
   // 3 响应拦截器
   instance.interceptors.response.use(res => {
-    return res
+    return res.data.result
   }, err => {
     return Promise.reject(err)
   })

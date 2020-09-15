@@ -7,7 +7,7 @@ Vue.config.productionTip = false
 import router from './router/index.js'
 
 // 使用element-ui
-import element from './plugins/element/index.js'
+import element from './plugins/element.js'
 import 'element-ui/lib/theme-chalk/index.css'
 Vue.use(element)
 

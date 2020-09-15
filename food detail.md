@@ -37,6 +37,20 @@
       git push -u origin master  (同步到远程仓库)
     ```
 
+## Git使用
+  ```
+    git add .
+  ```
+  ```
+    git status
+  ```
+  ```
+    git commit -m '说明...'
+  ```
+  ```
+    git push -u origin master
+  ```
+
 ## 项目目录结构
   - food
       * assets
@@ -132,59 +146,14 @@
       // 第一步
       npm install element-ui --save
     ```
-  - 按需引入、全部引入
   - 项目采用**按需引入**，减小项目体积
     ``` js
-      // 第二步：安装babel-plugin-component插件
-      npm install babel-plugin-component -D
+      vue add element
     ```
-    ``` js
-      // 第三步：将.babelc修改为
-      {
-        "presets": [["es2015", { "modules": false }]],
-        "plugins": [
-          [
-            "component",
-            {
-              "libraryName": "element-ui",
-              "styleLibraryName": "theme-chalk"
-            }
-          ]
-        ]
-      }
+
+## better-scroll使用
+  - 安装
     ```
-    ``` js
-      // 第四步：引入部分组件，可以在main.js中写入以下内容
-      import Vue from 'vue';
-      import { Button, Select } from 'element-ui';
-      import App from './App.vue';
-
-      Vue.component(Button.name, Button);
-      Vue.component(Select.name, Select);
-      /* 或写为
-       * Vue.use(Button)
-       * Vue.use(Select)
-       */
-
-      new Vue({
-        el: '#app',
-        render: h => h(App)
-      });
-
+      npm install better-scroll --save
     ```
-    ``` js
-      // 第五步：第四步是修改main.js，也可以单独创建文件plugin/element/index.js，然后写入以下内容
-      import {
-        Carousel,
-        CarouselItem
-      } from 'element-ui'
-
-      const element = {
-        install(Vue) {
-          Vue.use(Carousel),
-          Vue.use(CarouselItem)
-        }
-      }
-
-      export default element
-    ```
+    

@@ -46,6 +46,7 @@
     justify-content: center;
     align-items: center;
     box-shadow: 0 10px 15px 1px #000000;
+    background-color: #FFFFFF;
     overflow: hidden;
   }
 </style>
