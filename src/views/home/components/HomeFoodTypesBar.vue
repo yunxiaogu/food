@@ -1,9 +1,9 @@
 <!-- 食物种类导航栏组件 -->
 <template>
   <div class="type-bar">
-    <HorizontalScroll>
-      <div class="item-wrap" :class="{active: index==currentIndex}" v-for="(item, index) in list" :key="item.name" @click="itemClick(item, index)">
-        {{item.name}}
+    <HorizontalScroll :bounce="false">
+      <div class="item-wrap" v-for="(item, index) in list" :key="item.name" @click="itemClick(item, index)">
+        <div class="item-title" :class="{active: index==currentIndex}">{{item.name}}</div>
       </div>
     </HorizontalScroll>
   </div>
@@ -38,7 +38,10 @@
     methods: {
       itemClick(item, index) {
         this.currentIndex = index
-        this.$emit('itemClick', item.classid)
+        this.$emit('itemClick', item.classid, index)
+      },
+      changeIndex(index) {
+        this.currentIndex = index
       }
     }
   }
@@ -47,8 +50,7 @@
 <style scoped>
   .type-bar {
     height: 40px;
-    width: 100vw;
-    background-color: rgba(17, 196, 255, .1);
+    background-color: var(--theme-color);
   }
 
   .item-wrap {
@@ -58,17 +60,25 @@
     text-align: center;
     line-height: 40px;
     font-size: 13px;
-    color: #8C8C8C;
+    color: #FFFFFF;
     text-overflow: ellipsis;
     white-space: nowrap;
     overflow: hidden;
   }
 
+  .item-wrap .item-title {
+    padding: 0 2px;
+    border-radius: 5px;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+
   .active {
-    height: 35px;
+    width: 38px;
+    height: 36px;
+    margin: 2px auto;
     color: #000000;
-    font-weight: 600;
-    background-color: rgba(17, 196, 255, .3);
-    border-bottom: 5px solid #11C4FF;
+    line-height: 36px;
+    background-color: rgba(255, 255, 255, .5);
   }
 </style>

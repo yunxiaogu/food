@@ -32,3 +32,8 @@ export function getFoodByClassId(classid, start, num) {
     }
   })
 }
+
+// 获取初始数据
+// export function getInitData() {
+//   return request()
+// }

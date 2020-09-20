@@ -1,0 +1,54 @@
+// 详情页食品详情数据
+export const detail = {
+  "id": 2,
+  "classid": 2,
+  "name": "开心土豆泥",
+  "peoplenum": "3-4人",
+  "preparetime": "10分钟内",
+  "cookingtime": "30分钟-1小时",
+  "content": "粉粉绵绵的土豆泥，加入玉米粒、青豆点缀，色彩亮丽清新，而火腿肠更是增加了口感，造型圆圆的，十分的可爱哦！",
+  "pic": "http://api.jisuapi.com/recipe/upload/20160719/115137_58878.jpg",
+  "tag": "下午茶,减肥,家常菜,春季,甜,甜品,私房菜,素菜,蒸",
+  "material": [{
+    "mname": "火腿肠",
+    "type": 0,
+    "amount": "50g"
+  }, {
+    "mname": "玉米粒",
+    "type": 0,
+    "amount": "30g"
+  }, {
+    "mname": "青豆",
+    "type": 0,
+    "amount": "30g"
+  }, {
+    "mname": "沙拉酱",
+    "type": 0,
+    "amount": "适量"
+  }, {
+    "mname": "牛奶",
+    "type": 0,
+    "amount": "少许"
+  }, {
+    "mname": "盐",
+    "type": 0,
+    "amount": "1勺"
+  }, {
+    "mname": "土豆",
+    "type": 1,
+    "amount": "2个"
+  }],
+  "process": [{
+    "pcontent": "首先将去皮土豆切成块，泡入清水，火腿肠切粒。",
+    "pic": "http://api.jisuapi.com/recipe/upload/20160719/162542_28654.jpg"
+  }, {
+    "pcontent": "将土豆放入蒸锅，隔水蒸十分钟，取出。",
+    "pic": "http://api.jisuapi.com/recipe/upload/20160719/162542_65552.jpg"
+  }, {
+    "pcontent": "将玉米粒、青豆，放入蒸锅，隔水蒸十分钟，取出。",
+    "pic": "http://api.jisuapi.com/recipe/upload/20160719/162543_51629.jpg"
+  }, {
+    "pcontent": "将土豆压成泥，放入火腿、青豆、玉米粒，挤入适量沙拉酱，再淋入少量牛奶，放入半勺盐，搅拌均匀，用模具压成心形，就可以享用了。",
+    "pic": "http://api.jisuapi.com/recipe/upload/20160719/162543_43692.jpg"
+  }]
+}

@@ -2,7 +2,7 @@
 <template>
   <div class="food-list">
     <div class="food-wrap">
-      <FoodListItem v-for="item in 10" :key="item"></FoodListItem>
+      <FoodListItem v-for="item in foodList" :key="item.id + ''" :food="item"></FoodListItem>
     </div>
   </div>
 </template>
@@ -39,6 +39,4 @@
     justify-content: center;
     align-items: center;
   }
-
-
 </style>

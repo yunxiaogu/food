@@ -16,9 +16,7 @@
       // 是否开启回弹动画
       bounce: true,
       // 派发scroll事件的级别：0,1,2,3
-      probeType: 0,
-      // 是否开启上拉加载
-      pullUpLoad: false
+      probeType: 0
     },
     data() {
       return {
@@ -37,6 +35,7 @@
           scrollX: true,
           click: true,
           scrollbar: false,
+          bounce: this.bounce,
           probeType: this.probeType
         })
         // 监听滚动的位置
@@ -44,19 +43,6 @@
           // 将位派送出去
           this.$emit('scroll', position)
         })
-        // 监听上拉加载
-        // if(this.probeType == 2 || this.probeType ==3) {
-        //   this.scroll.on('pullingUp', () => {
-        //     this.$emit('pullingUp')
-        //   })
-        // }
-        // 监听滚动到底部
-        // if(this.pullUpLoad) {
-        //   this.scroll.on('pullingUp', () => {
-        //     // 滚动到底部了，但是需要外部组件知道跑，传递出去
-        //     this.$emit('pulingUp')
-        //   })
-        // }
       }
     }
   }
